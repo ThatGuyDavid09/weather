@@ -1,0 +1,15 @@
+#loading {
+    font-size: 40px;
+}
+
+#mainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #202124;
+}
+
+#alignContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content
+}

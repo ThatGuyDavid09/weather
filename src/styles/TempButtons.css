@@ -1,0 +1,20 @@
+#tempButtonsContainer {
+    padding: 0px 5px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#seperator {
+    margin: 0px 5px;
+}
+
+.data {
+    margin: 0px;
+    color: #899f92;
+}
+
+#selected {
+    color: white;
+}

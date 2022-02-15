@@ -1,0 +1,25 @@
+.dayShort {
+    margin: 0;
+    font-weight: bold;
+}
+
+#dateSelectorContainer div {
+    height: fit-content
+}
+
+.tempDataContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tempData {
+    padding: 5px;
+    margin: 0px;
+    /* font-weight: bold; */
+}
+
+.minTemp {
+    color: #899f92;
+}
