@@ -2,6 +2,7 @@ import WeatherDisplay from './components/WeatherDisplay';
 import DateSelectorContainer from './components/DateSelectorContainer';
 import './styles/App.css';
 import React, { Component } from 'react';
+import { Helmet } from "react-helmet";
 
 
 class App extends Component {
@@ -79,16 +80,24 @@ class App extends Component {
 
   render() {
     if (this.state.weather.current === undefined) { return <div>Loading...</div> }
-    
-
+  
 
     try {
-      return (<div id="mainContainer">
-        <div id="alignContainer">
-          <WeatherDisplay weatherInfo={this.state.weatherInfo} weather={this.state.weather.current} location={this.state.weather.location} handleTempChange={this.handleTempChange}/>
-          <DateSelectorContainer weather={this.state.weather} isFar={this.state.isFar} onSelect={this.handleReselect} />
+      return (
+      <div>
+        <Helmet>
+          <title>Simple weather app</title>
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        </Helmet>
+
+          <div id="mainContainer">
+            <div id="alignContainer">
+              <WeatherDisplay weatherInfo={this.state.weatherInfo} weather={this.state.weather.current} location={this.state.weather.location} handleTempChange={this.handleTempChange}/>
+              <DateSelectorContainer weather={this.state.weather} isFar={this.state.isFar} onSelect={this.handleReselect} />
+            </div>
         </div>
-      </div>);
+      </div>
+      );
     } catch (e) {
       return <div id="loading">Loading...</div>
     }
