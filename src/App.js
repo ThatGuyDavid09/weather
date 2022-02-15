@@ -27,7 +27,7 @@ class App extends Component {
     navigator.geolocation.getCurrentPosition(function(pos) {
       let lat = pos.coords.latitude;
       let long = pos.coords.longitude;
-      const url = `http://api.weatherapi.com/v1/forecast.json?key=c561f3d5588f44d59a8234059212112&q=${lat},${long}&days=6`;
+      const url = `https://api.weatherapi.com/v1/forecast.json?key=c561f3d5588f44d59a8234059212112&q=${lat},${long}&days=6`;
       console.log(url);
 
       ref.getWeather(url).then(data => {
